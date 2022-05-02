@@ -90,6 +90,12 @@ main {
     border-bottom:  2px solid white;
 }
 
+.produtos-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .produtos {
     width:  200px;
     display: flex;
@@ -97,12 +103,15 @@ main {
     justify-content: center;
     padding: 5px;
     flex-wrap: wrap;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.1s;
 }
 
 .produtos:hover {
     cursor: pointer;
     transform: translateY(-10px);
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.9);
 }
 
 
