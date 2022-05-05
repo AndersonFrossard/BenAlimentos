@@ -51,16 +51,6 @@
 }
 
 
-/* utils */
-
-.titulo-site {
-    display: flex;    
-    color: white;
-    font-weight:  700;
-    font-size:  60px;
-    align-items: center;
-
-}
 
 .titulo-site span {
     color: #FF382CC7;
@@ -85,16 +75,109 @@ main {
     margin-bottom: 30px;
 }
 
+#mobile-button-menu {
+    display: none;
+}
+
 .container-titulo-categoria .titulo-categoria{
     color: white;
     border-bottom:  2px solid white;
 }
 
-.produtos-container {
-    display: flex;
+.lista-produtos {
+    display: flex; 
     justify-content: space-between;
     align-items: center;
 }
+
+
+#lista-produtos {
+    display:  grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap:  40px;
+}
+
+#lista-produtos .produto_item {
+    border-radius: 10px 0px 20px 20px;
+    background: #54555B;
+    cursor: pointer;
+}
+
+#lista-produtos .produto_item img {
+    width:  100%;
+    height:  137px;
+    object-fit:  cover;
+}
+
+#lista-produtos .produto_item .produto_item_text {
+    padding: 20px;
+}
+
+#lista-produtos .produto_item .produto_item_text h2{
+    color: white;
+    font-weight: 400;
+}
+
+@media (max-width: 750px) {
+  #mobile-button-menu {
+    display: flex;
+  }
+
+  #lista-produtos {
+    grid-template-columns: 1fr 1fr;
+    grig-gap: 20px;
+    max-width: 100%;
+  }
+
+  #lista-produtos .produto_item {
+    width:  160px;
+  }
+  .header ol {
+    display: none;
+    background:  white;
+    position:  fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width:  250px;
+    z-index: 4;
+    padding-top: 20px;
+}    
+
+
+.header ol::after{
+    content: "";
+    position: fixed;
+    background: #00000099;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: calc(100vw-250px);
+}
+
+.header ol .str_none_desk {
+    
+}
+
+.header ol li:first-child {
+    padding-left: 20px;
+}
+
+.header ol li a {
+    color: black;
+}
+  .titulo-site {
+    font-size: 40px;
+  }
+
+  .titulo-site span {
+    font-size 20px;
+  }
+}  
+
 
 .produtos {
     width:  200px;
@@ -117,14 +200,45 @@ main {
 
 .cards .img {
     width: 50px;
-
 }
 /* utils */
 
+/* utils */
 
+.titulo-site {
+    display: flex;    
+    color: white;
+    font-weight:  700;
+    font-size:  60px;
+    align-items: center;
+
+}
 
 .titulo-site .container_subtitulo {
     display: flex;
     flex-direction: column;
     margin-left: 20px;
 }
+
+
+.active {
+    display:  block !important;
+}
+
+
+@media (max-width: 750px) {
+
+  .titulo-site {
+    font-size: 40px;
+  }
+
+  .titulo-site span {
+    font-size 20px;
+  }
+
+  .str_none_desk {
+    display: block;
+  }
+}  
+
+
